@@ -1,5 +1,4 @@
 import java.io.File
-import java.math.BigInteger
 
 fun main() {
     val inputData = File("src/input.txt").readLines()
