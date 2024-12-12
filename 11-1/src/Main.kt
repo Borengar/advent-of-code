@@ -1,11 +1,15 @@
 import java.io.File
+import kotlin.system.measureTimeMillis
 
 fun main() {
     val inputData = File("src/input.txt").readText()
     val numbers: MutableList<Long> = inputData.split(" ").map { it.toLong() }.toMutableList()
-    for (i in 1..75) {
-        blink(numbers)
+    val time = measureTimeMillis {
+        for (i in 1..25) {
+            blink(numbers)
+        }
     }
+    println("${time}ms")
     println(numbers.count())
 }
 
